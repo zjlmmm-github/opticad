@@ -37,7 +37,7 @@ module.exports = (env, options) => {
     mode: isProduction ? 'production' : 'development',
     devtool: isProduction ? false : 'source-map',
     watch: !isProduction,
-    entry: './src/index.ts',
+    entry: isProduction ?'./src/opticad/index.ts':'./src/index.ts',
     output: {
       filename: '[name].js',
       path: path.join(__dirname, 'dist')
